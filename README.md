@@ -1,4 +1,4 @@
-# PKNU Master Thesis Template (Unofficial)
+# PKNU Master Thesis LaTex Template (Unofficial)
 
 ## Introduction
 This is a LaTeX template for PKNU master thesis. It is specifically made for **AI Convergence** department. However, it can be used for other departments with some modifications in `pknu-thesis.cls` file. Since we have to strictly comply with the format of the thesis in HWP or MS WORD. It feels like a torture to write a thesis in those applications. So, I modified this template to make it easier to write a thesis in LaTeX for **AI Convergence** department (credit to: [Author](https://github.com/Luminebear/PKNU-thesis-template)). 

@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 							PKNU Graduate thesis template in LaTeX format
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTCLASS: PKNU-thesis class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Options
+% %%%% doctor: 박사과정 | master:  석사과정
+% %%%% korean: 한글논문 | english: 영문논문
+% %%%% final:  최종판   | draft:   시험판
+% %%%% pdfdoc: 선택하지 않으면 북마크와 colorlink를 만들지 않습니다.(Generate bookmark and colorlink if enabled)
+\documentclass[master,english,final,pdfdoc]{PKNU-thesis}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USEPACKAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default package by PKNU-thesis class: geometry, indentfirst, color
+% 필요에따라 \usepackage 명령어로 패키지를 이용하면 됩니다.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{comment}
+\usepackage{physics}
+\usepackage{anyfontsize}
+\newcommand{\argmax}{\operatornamewithlimits{arg\,max}}
+
+% user custom package
+\usepackage[style=phys, biblabel=brackets, block=space]{biblatex}
+\usepackage{tocloft}
+\usepackage{listings}
+
+% TOC settings
+\renewcommand\cftchapaftersnum{.}
+\renewcommand\cftsecaftersnum{.}
+\renewcommand\cftsubsecaftersnum{.}
+\renewcommand\cftchapnumwidth{2.0em}
+\renewcommand\cftsecnumwidth{1.4em}
+\renewcommand\cftsecindent{2.0em}
+\renewcommand\cftsubsecnumwidth{2.4em}
+\renewcommand\cftsubsecindent{3.4em}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE OF THESIS 논문제목
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[korean]{다람쥐 헌 쳇바퀴에 타고파}
+\title[english]{The Quick Brown Fox Jumps Over The Lazy Dog}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHOR 저자명
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% family_name, given_name 성, 이름을 구분해서 입력
+% ex) \author[english]{family name in english}{given name in english}
+% If you are a foreigner (this means you have no korean name),
+% You must fill the korean name as blank, instead of deleting it or commenting it out.
+\author[korean]{}{}
+\author[english]{Kea}{Kimleang}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADVISOR 지도교수
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professor name in Korean, Professor name in English, Signiture file name
+\advisor[major]{Korean Profess's Name}{English Profess's Name}{nosign}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEPARTMENT 학과명
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\department{AI}{engineering}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STUDENT ID
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 비워있어도 무관
+\studentid{2022XXXXX}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFREEE 심사위원
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Options [enumeration of refrees]
+% %%%% Up to 5
+% %% Parameters
+% %%%% 한글이름(in Korean) or 영문이름(in English)
+% %% 석사과정 3인, 박사과정 5인
+% %% 국문논문 작성시 한글로, 영문논문 작성시 영문이름 기입
+% Of course english name is available
+\referee[1]{홍 상 직}
+\referee[2]{옥 영 향}
+\referee[3]{홍 상 직}
+\referee[4]{옥 영 향}
+\referee[5]{홍 상 직}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SIGNATURE OF REFREES 심사위원 서명
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Options [enumeration of refrees]
+% %%%% Up to 5
+% %% Parameters
+% %%%% Path of a signature figure
+\refsign[1]{./figure/Erwin_Schrödinger_signature.png}
+\refsign[2]{./figure/Erwin_Schrödinger_signature.png}
+\refsign[3]{./figure/Erwin_Schrödinger_signature.png}
+\refsign[4]{./figure/Erwin_Schrödinger_signature.png}
+\refsign[5]{./figure/Erwin_Schrödinger_signature.png}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPROVAL DATE 학위논문 승인일
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Parameters
+% %%%% Year, Month, Day 연,월,일 순으로 입력
+\approvaldate{2024}{02}{28}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFREEE DATE 심사위원 논문심사일
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Parameters
+% %%%% Year, Month, Day 연,월,일 순으로 입력
+\refereedate{2024}{02}{28}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY 참고문헌 (By BibLaTeX)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{thesis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGINNING OF THE DOCUMENT 문서 시작
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Main Cover, Inner Cover, Approval of Statement 앞표지, 속표지, 학위논문 인준서
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % PKNU-thesis 클래스 옵션을 final로 지정해주면 자동으로 생성, draft로 지정해주면 생성되지 않습니다.
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Table of Contents, List of Figures, List of Tables 목차, 그림목차, 표목차
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Use \tableofcontents, \listoffigures, \listoftables
+    % Or use \makecontents for showing together.
+    \makecontents
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % ABSTRACT 논문요약
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % %% Parameters
+    % %%%% Abstract in English, Abstract in Korean
+    % 초록은 한국어논문의 경우 한국어 -> 영어 순으로, 영어논문의 경우 영어 -> 한국어로 생성됩니다.
+    % 작성은 논문 종류와 관계없이 반드시 영어, 한국어 순으로 작성해주세요!
+    \begin{abstract}
+        {
+            Abstract in English
+        }
+        {
+            Abstract in Korean
+        }
+    \end{abstract}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Main Body 본문
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% 이하의 본문은 LaTeX 표준 클래스 report 양식에 준하여 작성하시면 됩니다.
+
+	\input{./dat/01.introduction}
+	\input{./dat/02.background}
+	\input{./dat/03.dataandmethod}
+	\input{./dat/04.result}
+	\input{./dat/05.conclusionanddiscussion}
+	\input{./dat/06.appendix}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % BIBLIOGRAPHY 참고문헌
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % For BibLaTeX
+    \addcontentsline{toc}{chapter}{Bibliography}
+    \printbibliography
+
+    % For BibTeX / natbib
+    % \let\Section\section
+    % \def\section*#1{\Section*{{\hyperlink{toc}{#1}}}}
+    % \renewcommand{\thesection}{}
+    % \bibliographystyle{chicago}
+    % \bibliography{thesis}
+    % \nocite{apsrev42Control}
+    % \bibliographystyle{./revtex4-2_bst/apsrev4-2}
+    % \bibliography{thesis}
+    % Copy and Paste the code in .bib file below
+    % @CONTROL{REVTEX42Control}
+    % @CONTROL{apsrev42Control,author="00",editor="1",pages="1",title="0",year="0"}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % ACKNOWLEDGEMENT 감사의 글
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % %% Options 
+    % %%%% 1: in Korean 2: in English
+    \acknowledgement[2]
+    Don't be afraid to give up the good to go for the great. - John D. Rockfeller
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF THE DOCUMENT 문서 끝
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
